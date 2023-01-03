@@ -15,23 +15,26 @@
 <div class="menu-item"><a href="index.html">home</a></div>
 <div class="menu-item"><a href="bio.html">biography</a></div>
 <div class="menu-category">research</div>
-<div class="menu-item"><a href="projects.html">projects</a></div>
-<div class="menu-item"><a href="papers.html">papers</a></div>
-<div class="menu-item"><a href="software.html">software</a></div>
+<div class="menu-item"><a href="space-time_search.html">space-time&nbsp;search</a></div>
+<div class="menu-item"><a href="projects.html">misc</a></div>
 <div class="menu-category">hobbies</div>
 <div class="menu-item"><a href="book_solutions.html">book&nbsp;solutions</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
 <h1>Kent W. Gauen - Projects</h1>
-<div id="subtitle"><a href="https://engineering.purdue.edu/ECE">Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/">Purdue University</a></div>
+<div id="subtitle"><a href="https://engineering.purdue.edu/ECE" target=&ldquo;blank&rdquo;>Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/" target=&ldquo;blank&rdquo;>Purdue University</a>
+</div>
 </div>
 <h2>Optimal Transport Notes</h2>
-<p>I participated in an discussion on Optimal Transport (OT) with some Purdue students and faculty. I made a few notes specifically outlining how OT is applied to the Wasserstein GAN. The mathematics leads to specific, non-obvious (to me) code changes from the original GAN algorithm. This is an example of how abstract mathematical constructs have meaningful code changes. <a href="docs/ot_gan.pdf">The document is linked here.</a></p>
+<p>I participated in an discussion on Optimal Transport (OT) with some Purdue students and faculty. I made a few notes specifically outlining how OT is applied to the Wasserstein GAN. The mathematics leads to specific, non-obvious (to me) code changes from the original GAN algorithm. This is an example of how abstract mathematical constructs have meaningful code changes. <a href="docs/ot_gan.pdf" target=&ldquo;blank&rdquo;>The document is linked here.</a>
+</p>
 <h2>MCMC trajectory inference for semi-Markov Jump Process</h2>
-<p>In many ways a Markov Jump Process (MJP) is a continuous time version of Hidden Markov Models. In a MJP, the jump times following a Poisson Process with a constant rate; that is, the chance of making a jump does not depend on the history of the jumps. A semi-Markov Jump Process is a generalization of MJP, and allows the jump times to depend on the hold time of a specific state.</p>
+<p>In many ways a Markov Jump Process (MJP) is a continuous time version of Hidden Markov Models. In a MJP, the jump times following a Poisson Process with a constant rate; that is, the chance of making a jump does not depend on the history of the jumps. A semi-Markov Jump Process is a generalization of MJP, and allows the jump times to depend on the hold time of a specific state.
+</p>
 <h2>Classifying True Positives v.s. False Negatives</h2>
-<p>For object detection, a model can either find the annotation (a true positive) or a miss an annotation (a false negative). For two weeks, I worked on classifying the two types of annotations to identify if there is some abstract relationship between images that a deep learning model could discover. TLDR; maybe but this experiment is not convincing.</p>
+<p>For object detection, a model can either find the annotation (a true positive) or a miss an annotation (a false negative). For two weeks, I worked on classifying the two types of annotations to identify if there is some abstract relationship between images that a deep learning model could discover. TLDR; maybe but this experiment is not convincing.
+</p>
 <table id="ExperimentResults">
 <tr class="r1"><td class="c1"><b>Experimental Results</b> </td></tr>
 <tr class="r2"><td class="c1">PASCAL VOC train </td><td class="c2"> True Positive Rate </td><td class="c3"> 0.69 </td></tr>
@@ -39,30 +42,38 @@
 <tr class="r4"><td class="c1">PASCAL VOC test </td><td class="c2"> True Positive Rate </td><td class="c3"> . </td></tr>
 <tr class="r5"><td class="c1">PASCAL VOC test </td><td class="c2"> True Negative Rate </td><td class="c3"> .
 </td></tr></table>
-<p>The model seems to do only okay on the training test, and generalized somewhat poorly to the testing set. This is surprising to me. I will keep tweaking this in the future.</p>
+<p>The model seems to do only okay on the training test, and generalized somewhat poorly to the testing set. This is surprising to me. I will keep tweaking this in the future.
+</p>
 <h2>Stability Analysis of a Neural Network</h2>
-<p>Since the recent success of using deep learing models for tasks such as object detection, companies, media outlets, and academic conferences have been referring to two major phenomena: (1) artificial intelligence (2) autonomous machines. This purpose of this paper is to address these phenomena. First, we argue that image processing is only distantly related to artificial intelligence. Second, we identify important issues limiting the application of computer vision to autonomous machines in commericial settings. Check out <a href="docs/neural_network_stability.pdf">the pdf report here</a>.</p>
+<p>Since the recent success of using deep learing models for tasks such as object detection, companies, media outlets, and academic conferences have been referring to two major phenomena: (1) artificial intelligence (2) autonomous machines. This purpose of this paper is to address these phenomena. First, we argue that image processing is only distantly related to artificial intelligence. Second, we identify important issues limiting the application of computer vision to autonomous machines in commericial settings. Check out <a href="docs/neural_network_stability.pdf" target=&ldquo;blank&rdquo;>the pdf report here</a>.
+</p>
 <h2>Rotate and Evaluate</h2>
-<p>Translation invariance of an operation is satisfied when any translation (or geometrically interpreted as &ldquo;sliding&rdquo;) of a given pattern yields the same output. It can be shown the convolution operation is translation invariant. However, it is not in general rotationally invariant. For an object detection deep learning model, how well does the model perform under rotation? <a href="docs/rotate_and_evaluate.pdf">The detailed findings are included in this report.</a> Below is the resulting accuracy measure ( average precision in this case ) for the Faster RCNN model, and an example of how the predictions from Faster RCNN change with the rotation of the image.</p>
+<p>Translation invariance of an operation is satisfied when any translation (or geometrically interpreted as &ldquo;sliding&rdquo;) of a given pattern yields the same output. It can be shown the convolution operation is translation invariant. However, it is not in general rotationally invariant. For an object detection deep learning model, how well does the model perform under rotation? <a href="docs/rotate_and_evaluate.pdf" target=&ldquo;blank&rdquo;>The detailed findings are included in this report.</a> Below is the resulting accuracy measure ( average precision in this case ) for the Faster RCNN model, and an example of how the predictions from Faster RCNN change with the rotation of the image.
+</p>
 <table class="imgtable"><tr><td>
 <a href="gauenk.com"><img src="imgs/rotation_ap.png" alt="alt text." width="350px" height="450px" /></a>&nbsp;</td>
 <td align="left"><p>This image is the evaluation of the Faster RCNN<br />
-object detection model on PASCAL VOC's 2007 testing set.</p>
+object detection model on PASCAL VOC's 2007 testing set.
+</p>
 </td></tr></table>
 <p>
 <div class="row">
 <div class="column">
-<img src="imgs/000017_image.gif" alt="image" style="width:50%">
+<img src="imgs/000017<u>image.gif" alt="image" style="width:50%">
 </div>
 <div class="column">
-<img src="imgs/000017_anno.gif" alt="annotation" style="width:50%">
+<img src="imgs/000017</u>anno.gif" alt="annotation" style="width:50%">
 </div>
 </div>
+
 </p>
-<p><a href="example_rotations.html">Here are some more examples of rotating image gifs.</a></p>
+<p><a href="example_rotations.html" target=&ldquo;blank&rdquo;>Here are some more examples of rotating image gifs.</a>
+</p>
 <h2>How does Faster RCNN accepts many input image sizes?</h2>
-<p>Faster RCNN <a href="https://arxiv.org/pdf/1506.01497.pdf">pdf</a> describes a specific implementation of a deep learning model for object detection. Other machine learning models deform an image to a specific image size, determined when the model is first created. Instead, Faster RCNN accepts a range of image sizes. &ldquo;But how?&rdquo; One might wonder. After all, a deep learning model <b>is a machine</b> not unlike a mechanical pencil. Saying a model accepts many input image sizes seems analogous to saying the mechanical pencil can accept many different sizes of led. In the analogy, a piece of led too skinny would slide straight through the pencile. A piece of led too large would not fit through the plastic tip. So how does this <b>machine</b>, Faster RCNN, accept many different input image sizes?</p>
-<p>The answer is give in <a href="docs/how_faster_rcnn_accepts_various_input_image_sizes.pdf">this report</a>.</p>
+<p>Faster RCNN <a href="https://arxiv.org/pdf/1506.01497.pdf" target=&ldquo;blank&rdquo;>pdf</a> describes a specific implementation of a deep learning model for object detection. Other machine learning models deform an image to a specific image size, determined when the model is first created. Instead, Faster RCNN accepts a range of image sizes. &ldquo;But how?&rdquo; One might wonder. After all, a deep learning model <b>is a machine</b> not unlike a mechanical pencil. Saying a model accepts many input image sizes seems analogous to saying the mechanical pencil can accept many different sizes of led. In the analogy, a piece of led too skinny would slide straight through the pencile. A piece of led too large would not fit through the plastic tip. So how does this <b>machine</b>, Faster RCNN, accept many different input image sizes?
+</p>
+<p>The answer is give in <a href="docs/how_faster_rcnn_accepts_various_input_image_sizes.pdf" target=&ldquo;blank&rdquo;>this report</a>.
+</p>
 </td>
 </tr>
 </table>

@@ -26,22 +26,20 @@
 <div id="subtitle"><a href="https://engineering.purdue.edu/ECE" target=&ldquo;blank&rdquo;>Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/" target=&ldquo;blank&rdquo;>Purdue University</a>
 </div>
 </div>
-<p>Abstract: Identifying similar patches within a noisy video is a core component of non-local, state-of-the-art denoisers. Classical methods search for similar patches across space and time, while recent deep-learning based methods (such as transformers) search only across space. Searching across time and utilizing optical flow for deep learning models is impractical because the current, differentiable non-local search requires representing the video as a database of overlapping patches which leads to an enormous consumption of GPU memory. This paper proposes using a classical CPU based algorithm re-implemented as a CUDA kernel to compute the non-local search on the video directly, thus side-stepping the memory concern and allowing optical flow to be used inside the non-local search. To make this search efficiently differentiable, we propose a CUDA kernel with a race condition that is \(\times\)1000 faster than the associated exact CUDA kernel and \(\times\) 50 faster than the exact CPU code. We show our search method allows existing denoising models to extend to new datasets, improves their restoration quality by leveraging the search space across time with optical flow, and enables the fine-tuning of denoising networks through our differentiable non-local search.
+<p>Abstract: Identifying similar patches within a noisy video is a core component of non-local, state-of-the-art denoisers. Classical methods search for similar patches across space and time, while recent deep-learning based methods (such as transformers) search only across space. Searching across time and utilizing optical flow for deep learning models is impractical because the current, differentiable non-local search requires representing the video as a database of overlapping patches which leads to an enormous consumption of GPU memory. This paper proposes using a classical CPU based algorithm re-implemented as a CUDA kernel to compute the non-local search on the video directly, thus side-stepping the memory concern and allowing optical flow to be used inside the non-local search. To make this search efficiently differentiable, we propose a CUDA kernel with a race condition that is \(\times\)1000 faster than the associated exact CUDA kernel and \(\times\) 50 faster than the exact CPU code. We show our search method allows existing denoising models to extend to new datasets, improves their restoration quality by leveraging the search space across time with optical flow, and enables the fine-tuning of denoising networks through our differentiablegs/ non-local search.
 </p>
 <p>Results:
 </p>
 <p>
 <div class="row">
 <div class="column">
-<img src="https://gauenk.github.io/imgs/space-time<u>search/set8</u>deno.png" alt="image" style="width:50%">
+<img src="https://gauenk.github.io/imgs//space-time-search/set8-deno.png" alt="image" style="width:50%">
 </div>
 <div class="column">
-<img src="https://gauenk.github.io/imgs/space-time<u>search/davis</u>deno.png" alt="image" style="width:50%">
+<img src="https://gauenk.github.io/imgs/space-time-search/davis-deno.png" alt="image" style="width:50%">
 </div>
 </div>
 
-</p>
-<p>Denoised Examples:
 </p>
 </td>
 </tr>

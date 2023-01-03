@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Kent W. Gauen - Space-Time Search</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Kent W. Gauen</div>
+<div class="menu-item"><a href="index.html">home</a></div>
+<div class="menu-item"><a href="bio.html">biography</a></div>
+<div class="menu-category">research</div>
+<div class="menu-item"><a href="space-time_search.html">space-time&nbsp;search</a></div>
+<div class="menu-item"><a href="projects.html">misc</a></div>
+<div class="menu-category">hobbies</div>
+<div class="menu-item"><a href="ml_reading_group.html">ML&nbsp;Reading&nbsp;Group</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Kent W. Gauen - Space-Time Search</h1>
+<div id="subtitle"><a href="https://engineering.purdue.edu/ECE" target=&ldquo;blank&rdquo;>Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/" target=&ldquo;blank&rdquo;>Purdue University</a>
+</div>
+</div>
+<p>Abstract: Identifying similar patches within a noisy video is a core component of non-local, state-of-the-art denoisers. Classical methods search for similar patches across space and time, while recent deep-learning based methods (such as transformers) search only across space. Searching across time and utilizing optical flow for deep learning models is impractical because the current, differentiable non-local search requires representing the video as a database of overlapping patches which leads to an enormous consumption of GPU memory. This paper proposes using a classical CPU based algorithm re-implemented as a CUDA kernel to compute the non-local search on the video directly, thus side-stepping the memory concern and allowing optical flow to be used inside the non-local search. To make this search efficiently differentiable, we propose a CUDA kernel with a race condition that is \(\times\)1000 faster than the associated exact CUDA kernel and \(\times\) 50 faster than the exact CPU code. We show our search method allows existing denoising models to extend to new datasets, improves their restoration quality by leveraging the search space across time with optical flow, and enables the fine-tuning of denoising networks through our differentiable non-local search.
+</p>
+<p>Results:
+</p>
+<p>
+<div class="row">
+<div class="column">
+<img src="imgs/space-time<u>search/set8</u>deno.png" alt="image" style="width:50%">
+</div>
+<div class="column">
+<img src="imgs/space-time<u>search/davis</u>deno.png" alt="image" style="width:50%">
+</div>
+</div>
+
+</p>
+<p>Denoised Examples:
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

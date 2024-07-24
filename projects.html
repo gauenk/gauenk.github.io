@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Kent W. Gauen - Projects</title>
+<title>Deformable Modules for Deep Neural Networks on Videos</title>
 </head>
 <body>
 <table summary="Table for page layout." id="tlayout">
@@ -15,8 +15,7 @@
 <div class="menu-item"><a href="index.html">home</a></div>
 <div class="menu-item"><a href="bio.html">biography</a></div>
 <div class="menu-category">research</div>
-<div class="menu-item"><a href="space-time_search.html">space-time&nbsp;search</a></div>
-<div class="menu-item"><a href="projects.html">misc</a></div>
+<div class="menu-item"><a href="deformable.html">deformable&nbsp;modules</a></div>
 <div class="menu-category">teaching</div>
 <div class="menu-item"><a href="ece302_sum24.html">ece&nbsp;302</a></div>
 <div class="menu-category">hobbies</div>
@@ -24,64 +23,20 @@
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>Kent W. Gauen - Projects</h1>
-<div id="subtitle"><a href="https://engineering.purdue.edu/ECE" target=&ldquo;blank&rdquo;>Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/" target=&ldquo;blank&rdquo;>Purdue University</a>
-</div>
+<h1>Deformable Modules for Deep Neural Networks on Videos</h1>
 </div>
 <h2>Superpixel Neighborhood Attention</h2>
 <table class="imgtable"><tr><td>
-<img src="imgs/sna.png" alt="alt text." />&nbsp;</td>
-<td align="left"><p>Images contain objects with deformable boundaries, such as the contours of a human face, yet attention operators act on square windows. This mixes features from perceptually unrelated regions, which can degrade the quality of a denoiser. One can exclude pixels using an estimate of perceptual groupings, such as superpixels, but the naive use of superpixels can be theoretically and empirically worse than standard attention. Using superpixel probabilities rather than superpixel assignments, this paper proposes soft superpixel neighborhood attention (SNA) which interpolates between the existing neighborhood attention and the naive superpixel neighborhood attention. This paper presents theoretical results showing SNA is the optimal denoiser under a latent superpixel model. SNA outperforms alternative local attention modules on image denoising, and we compare the superpixels learned from denoising with those learned with superpixel supervision. <a href="pdf" target=&ldquo;blank&rdquo;>pdf</a>
+<img src="imgs/sna.png" alt="alt text." width="600px" />&nbsp;</td>
+<td align="left"><p>[<a href="https://drive.google.com/file/d/1SaDF7hHkgzRe6DR1iM8Y9UbFMcZe3x9m/view?usp=sharing" target=&ldquo;blank&rdquo;>pdf</a>] Images contain objects with deformable boundaries, such as the contours of a human face, yet attention operators act on square windows. This mixes features from perceptually unrelated regions, which can degrade the quality of a denoiser. One can exclude pixels using an estimate of perceptual groupings, such as superpixels, but the naive use of superpixels can be theoretically and empirically worse than standard attention. Using superpixel probabilities rather than superpixel assignments, this paper proposes soft superpixel neighborhood attention (SNA) which interpolates between the existing neighborhood attention and the naive superpixel neighborhood attention. This paper presents theoretical results showing SNA is the optimal denoiser under a latent superpixel model. SNA outperforms alternative local attention modules on image denoising, and we compare the superpixels learned from denoising with those learned with superpixel supervision.
 </p>
 </td></tr></table>
-<h2>Optimal Transport Notes</h2>
-<p>I participated in an discussion on Optimal Transport (OT) with some Purdue students and faculty. I made a few notes specifically outlining how OT is applied to the Wasserstein GAN. The mathematics leads to specific, non-obvious (to me) code changes from the original GAN algorithm. This is an example of how abstract mathematical constructs have meaningful code changes. <a href="docs/ot_gan.pdf" target=&ldquo;blank&rdquo;>The document is linked here.</a>
-</p>
-<h2>MCMC trajectory inference for semi-Markov Jump Process</h2>
-<p>In many ways a Markov Jump Process (MJP) is a continuous time version of Hidden Markov Models. In a MJP, the jump times following a Poisson Process with a constant rate; that is, the chance of making a jump does not depend on the history of the jumps. A semi-Markov Jump Process is a generalization of MJP, and allows the jump times to depend on the hold time of a specific state.
-</p>
-<h2>Classifying True Positives v.s. False Negatives</h2>
-<p>For object detection, a model can either find the annotation (a true positive) or a miss an annotation (a false negative). For two weeks, I worked on classifying the two types of annotations to identify if there is some abstract relationship between images that a deep learning model could discover. TLDR; maybe but this experiment is not convincing.
-</p>
-<table id="ExperimentResults">
-<tr class="r1"><td class="c1"><b>Experimental Results</b> </td></tr>
-<tr class="r2"><td class="c1">PASCAL VOC train </td><td class="c2"> True Positive Rate </td><td class="c3"> 0.69 </td></tr>
-<tr class="r3"><td class="c1">PASCAL VOC train </td><td class="c2"> True Negative Rate </td><td class="c3"> 0.43 </td></tr>
-<tr class="r4"><td class="c1">PASCAL VOC test </td><td class="c2"> True Positive Rate </td><td class="c3"> . </td></tr>
-<tr class="r5"><td class="c1">PASCAL VOC test </td><td class="c2"> True Negative Rate </td><td class="c3"> .
-</td></tr></table>
-<p>The model seems to do only okay on the training test, and generalized somewhat poorly to the testing set. This is surprising to me. I will keep tweaking this in the future.
-</p>
-<h2>Stability Analysis of a Neural Network</h2>
-<p>Since the recent success of using deep learing models for tasks such as object detection, companies, media outlets, and academic conferences have been referring to two major phenomena: (1) artificial intelligence (2) autonomous machines. This purpose of this paper is to address these phenomena. First, we argue that image processing is only distantly related to artificial intelligence. Second, we identify important issues limiting the application of computer vision to autonomous machines in commericial settings. Check out <a href="docs/neural_network_stability.pdf" target=&ldquo;blank&rdquo;>the pdf report here</a>.
-</p>
-<h2>Rotate and Evaluate</h2>
-<p>Translation invariance of an operation is satisfied when any translation (or geometrically interpreted as &ldquo;sliding&rdquo;) of a given pattern yields the same output. It can be shown the convolution operation is translation invariant. However, it is not in general rotationally invariant. For an object detection deep learning model, how well does the model perform under rotation? <a href="docs/rotate_and_evaluate.pdf" target=&ldquo;blank&rdquo;>The detailed findings are included in this report.</a> Below is the resulting accuracy measure ( average precision in this case ) for the Faster RCNN model, and an example of how the predictions from Faster RCNN change with the rotation of the image.
-</p>
+<h2>Space-Time Attention: A Grid Search Beats a Deep Neural Network</h2>
 <table class="imgtable"><tr><td>
-<a href="gauenk.com"><img src="imgs/rotation_ap.png" alt="alt text." width="350px" height="450px" /></a>&nbsp;</td>
-<td align="left"><p>This image is the evaluation of the Faster RCNN<br />
-object detection model on PASCAL VOC's 2007 testing set.
+<img src="imgs/stnls.png" alt="alt text." width="700px" />&nbsp;</td>
+<td align="left"><p>[<a href="https://arxiv.org/pdf/2309.16849" target=&ldquo;blank&rdquo;>pdf</a>] Computing attention maps for videos is challenging due to the motion of objects between frames. While a standard non-local search is high-quality for a window surrounding each query point, the window's small size cannot accommodate motion. Methods that accommodate motion use an auxiliary network to predict the most similar key coordinates as long-range offsets from each query location. However, accurately predicting this flow field of offsets remains challenging, even for large-scale networks. Small spatial inaccuracies significantly impact the attention module's quality. This paper proposes a search strategy that combines the quality of a non-local search with the range of predicted offsets. The method, named Shifted Non-Local Search, executes a small grid search surrounding the predicted offsets to correct small spatial errors. Our method's in-place computation consumes 10 times less memory and is over 3 times faster than previous work. Experimentally, correcting the small spatial errors improves the video frame alignment quality by over 3 dB PSNR. Our search upgrades existing space-time attention modules, which improves video denoising results by 0.30 dB PSNR for a 7.5% increase in overall runtime. We integrate our space-time attention module into a UNet-like architecture to achieve state-of-the-art results on video denoising.
 </p>
 </td></tr></table>
-<p>
-<div class="row">
-<div class="column">
-<img src="imgs/000017<u>image.gif" alt="image" style="width:50%">
-</div>
-<div class="column">
-<img src="imgs/000017</u>anno.gif" alt="annotation" style="width:50%">
-</div>
-</div>
-
-</p>
-<p><a href="example_rotations.html" target=&ldquo;blank&rdquo;>Here are some more examples of rotating image gifs.</a>
-</p>
-<h2>How does Faster RCNN accepts many input image sizes?</h2>
-<p>Faster RCNN <a href="https://arxiv.org/pdf/1506.01497.pdf" target=&ldquo;blank&rdquo;>pdf</a> describes a specific implementation of a deep learning model for object detection. Other machine learning models deform an image to a specific image size, determined when the model is first created. Instead, Faster RCNN accepts a range of image sizes. &ldquo;But how?&rdquo; One might wonder. After all, a deep learning model <b>is a machine</b> not unlike a mechanical pencil. Saying a model accepts many input image sizes seems analogous to saying the mechanical pencil can accept many different sizes of led. In the analogy, a piece of led too skinny would slide straight through the pencile. A piece of led too large would not fit through the plastic tip. So how does this <b>machine</b>, Faster RCNN, accept many different input image sizes?
-</p>
-<p>The answer is give in <a href="docs/how_faster_rcnn_accepts_various_input_image_sizes.pdf" target=&ldquo;blank&rdquo;>this report</a>.
-</p>
 </td>
 </tr>
 </table>

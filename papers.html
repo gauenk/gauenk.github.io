@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Kent W. Gauen - Papers</title>
+<title>Deformable Modules for Deep Neural Networks on Images and Videos</title>
 </head>
 <body>
 <table summary="Table for page layout." id="tlayout">
@@ -15,33 +15,35 @@
 <div class="menu-item"><a href="index.html">home</a></div>
 <div class="menu-item"><a href="bio.html">biography</a></div>
 <div class="menu-category">research</div>
-<div class="menu-item"><a href="deformable.html">deformable&nbsp;modules</a></div>
+<div class="menu-item"><a href="papers.html">papers</a></div>
 <div class="menu-category">teaching</div>
 <div class="menu-item"><a href="ece302_fall24.html">ece&nbsp;302</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>Kent W. Gauen - Papers</h1>
-<div id="subtitle"><a href="https://engineering.purdue.edu/ECE" target=&ldquo;blank&rdquo;>Department of Electrical and Computer Engineering</a>, <a href="https://www.purdue.edu/" target=&ldquo;blank&rdquo;>Purdue University</a>
+<h1>Deformable Modules for Deep Neural Networks on Images and Videos</h1>
 </div>
-</div>
-<p>I think <a href="https://scholar.google.com/citations?user=CRbbyHMAAAAJ&amp;hl=en&amp;oi=ao" target=&ldquo;blank&rdquo;>google scholar</a> does a better job than me.
+<h2>Streaming Space-Time Superpixels</h2>
+<table class="imgtable"><tr><td>
+<img src="imgs/st_spix_seq.gif" alt="alt text." width="500px" />&nbsp;</td>
+<td align="left"><p>Temporally consistent, deformable regions can be used to improve estimates of 3D structure from 2D images, and are important for superpixel-enabled deep learning modules (attention and convolution). This project proposes a fast (about 10 ms/frame) and temporally consistent method to stream superpixels across frames of a video. The left figure depicts our novel algorithm propogating superpixels from frame t to frame t+1. The leftmost image is frame t and the rightmost image is frame t+1. The second image (a gif) shows each superpixel being shifted according to the optical flow. Red color indicates regions of overlapping superpixels (overlaps) and blue color indicates regions with no pixel values (holes). The third image (another gif) shows the holes and overlaps being iteratively filled with our algorithm. Once filled, this image matches frame t+1.
 </p>
-<h2>Conference Papers</h2>
-<ul>
-<li><p>Bo Fu, Anup Mohan, Yifan Li, Sanghyun Cho, <b>Kent Gauen</b>, and Yung-Hsiang Lu, &ldquo;Parallel Video Processing using Embedded Computer&rdquo;, IEEE Global Conference on Signal and Information Processing 2017. <a href="https://ieeexplore.ieee.org/document/8308597/" target=&ldquo;blank&rdquo;>[ieee]</a>
+</td></tr></table>
+<h2>Superpixel Neighborhood Attention</h2>
+<table class="imgtable"><tr><td>
+<img src="imgs/sna.png" alt="alt text." width="500px" />&nbsp;</td>
+<td align="left"><p>[<a href="https://drive.google.com/file/d/1SaDF7hHkgzRe6DR1iM8Y9UbFMcZe3x9m/view?usp=sharing" target=&ldquo;blank&rdquo;>pdf</a>, <a href="https://github.com/gauenk/spix_paper/tree/main" target=&ldquo;blank&rdquo;>code</a>] Images contain objects with deformable boundaries, such as the contours of a human face, yet attention operators act on square windows. This mixes features from perceptually unrelated regions, which can degrade the quality of a denoiser. This paper proposes using superpixel probabilities to re-weight the local attention map. If images are modeled with latent superpixel probabilities, we show our re-weighted attention module matches the theoretically optimal denoiser. The left image shows that NA mixes information from the unrelated blue region, Hard-SNA improperly rejects pixels from the adjacent orange regions, and SNA correctly selects the all the orange pixels and rejects the blue pixels.
+
+
+
 </p>
-</li>
-<li><p><b>Kent Gauen</b>, Ryan Dailey, John Laiman, Yuxiang Zi, Nirmal Asokan, Yung-Hsiang Lu, George K. Thiruvathukal, Mei-Ling Shyu, and Shu-Ching Chen, &ldquo;Comparison of Visual Datasets for Machine Learning&rdquo;, Proceedings of IEEE Conference on Information Reuse and Integration 2017. <a href="http://llc.stat.purdue.edu/~gauenk/publications/2017IRI.pdf" target=&ldquo;blank&rdquo;>[pdf]</a> <a href="https://ieeexplore.ieee.org/document/8102956/" target=&ldquo;blank&rdquo;>[ieee]</a> <a href="http://llc.stat.purdue.edu/~gauenk/publications/2017IRI_presentation.pdf" target=&ldquo;blank&rdquo;>[presentation]</a>
+</td></tr></table>
+<h2>Space-Time Attention with a Shifted Non-Local Search</h2>
+<table class="imgtable"><tr><td>
+<img src="imgs/stnls.png" alt="alt text." width="500px" />&nbsp;</td>
+<td align="left"><p>[<a href="https://arxiv.org/pdf/2309.16849" target=&ldquo;blank&rdquo;>pdf</a>, <a href="https://github.com/gauenk/stnls" target=&ldquo;blank&rdquo;>code</a>] Computing attention maps for videos is challenging due to the motion of objects between frames. Small spatial inaccuracies significantly impact the attention module's quality. Recent works propose using a deep network to correct these small inaccuracies. In this project, we efficiently implement a space-time grid search which outperforms existing deep neural network alternatives. The image on the left shows a no-shift search, a search using a deep network from related works, and our proposed shifted non-local search.
 </p>
-</li>
-<li><p><b>Kent Gauen</b>, Rohit Rangan, Anup Mohan, Yung-Hsiang Lu, Wei Liu, Alexander C Berg, &ldquo;Low-Power Image Recognition Challenge&rdquo;, Asia and South Pacific Design Automation Conference 2017. <a href="https://engineering.purdue.edu/HELPS/Publications/papers/2017ASPDAC.pdf" target=&ldquo;blank&rdquo;>[pdf]</a> <a href="https://ieeexplore.ieee.org/document/7858303/" target=&ldquo;blank&rdquo;>[ieee]</a>
-</p>
-</li>
-<li><p>Anup Mohan, <b>Kent Gauen</b>, Yung-Hsiang Lu, Wei Wayne Li, Xuemin Chen, &ldquo;Internet of Video Things in 2030: a World with Many Cameras&rdquo;, IEEE International Symposium of Circuits and Systems 2017. <a href="http://llc.stat.purdue.edu/~gauenk/publications/2017ISCAS.pdf" target=&ldquo;blank&rdquo;>[pdf]</a>
-</p>
-</li>
-</ul>
+</td></tr></table>
 </td>
 </tr>
 </table>

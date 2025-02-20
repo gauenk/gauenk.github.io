@@ -8,6 +8,10 @@ layout: default
 {% if page._styles %}
   <!-- Page/Post style -->
   <style type="text/css">
+    body {
+        color: black;  /* Ensures text is visible */
+        background-color: white; /* Ensures background stays white */
+    }
     {{ page._styles }}
   </style>
 {% endif %}

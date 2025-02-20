@@ -12,11 +12,11 @@ nav_order: 2
 In these exciting times, self-driving cars are taxis, robots are chefs, and large-language models assist coders, lawyers, and medical professionals alike. This is possible because of amazing progress in large-scale deep neural networks. However, today's large networks have known limitations [1,2,3,4]. Training with GPUs is expensive and meaningfully contributes to climate change [4], our responsibility to ensure data privacy restricts access to important data sources, the interpretability of deep features is lacking [2], and deep networks learn superficially [1]. Perhaps the most pressing outcome from these problems are unpredictable failures and untrustworthy results [1,2,3]. These issues inspire analogies between large-scale deep neural networks and fictional creatures such as *Mistwraiths* and Shoggoth. Mistwraiths use bones of other creatures to construct their own skeleton. They do not care if there are three skulls instead of one, how many arms they have, nor if there is a hand among their feet. All that matters is that they "usually work". However, this concept of "usually working" is limited by the extent of our testing, which is problematic for real-world settings where uncommon events for an individual are often common across a population. In addition, the plethora of research in machine learning and lack of widespread, real-world deployment suggests the gap between "usually working" and "reliably working" is significant. So what can we do to reliably use the power of deep neural networks?
 
 <div class="row">
-  <div class="col-sm-5">
+  <div class="col-sm-4">
     <img class="image-container" src="/assets/img/monster_speech.png" alt="">
   </div>
   <div class="col-sm-2"></div>
-  <div class="col-sm-5">
+  <div class="col-sm-4">
     <img class="image-container" src="/assets/img/human.png" alt="">
   </div>
 </div>

@@ -18,7 +18,7 @@ body {
 }
 
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
+ // Add some padding for the nav-bar.
   padding-top: 56px;
 }
 
@@ -27,9 +27,9 @@ body.sticky-bottom-footer {
   padding-bottom: 0;
 }
 
-.container {
-  max-width: $max-content-width;
-}
+// .container {
+//   max-width: $max-content-width;
+// }
 
 // Profile
 .profile {
@@ -37,6 +37,13 @@ body.sticky-bottom-footer {
     width: 100%;
   }
 }
+
+.image-container{
+ height: 400px;
+ // width: 100%;
+ background-size: cover;
+}
+
 
 // TODO: redefine content layout.
 

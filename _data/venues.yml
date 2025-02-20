@@ -5,5 +5,11 @@
 "PhysRev":
   url: https://journals.aps.org/
 
-"Vision":
-  color: "#009f36"
+"Under Review":
+  color: "#D3D3D3"
+
+"NeurIPS":
+  color: "#add8e6"
+
+"arXiv":
+  color: "#add8e6"

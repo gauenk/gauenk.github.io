@@ -17,7 +17,7 @@ In these exciting times, self-driving cars are taxis, robots are chefs, and larg
   </div>
   <div class="col-sm-2"></div>
   <div class="col-sm-4">
-    <img class="image-container" src="/assets/img/human.png" alt="">
+    <img class="image-container" src="/assets/img/human_500.png" alt="">
   </div>
 </div>
 

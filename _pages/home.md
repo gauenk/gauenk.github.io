@@ -23,6 +23,6 @@ announcements:
   limit: 3 # leave blank to include all the news in the `_news` folder
 ---
 
-Hello :wave: I use self-similarity and superpixels as an inductive bias to design modules for deep neural networks. The applications of my research have focused on image/video denoising, but can apply more broadly across pixel-level computer vision tasks (deblurring, segmentation, etc). I am currently working to connect my research on 2D+time videos to our 3D(+time?) reality.
+Hello :wave: I use self-similarity and superpixels as an inductive bias to design modules for deep neural networks. The applications of my research have focused on image/video denoising, but can apply more broadly across pixel-level computer vision tasks (deblurring, segmentation, etc). I am currently working to connect my research on 2D+time videos to our 3D+time reality.
 
 

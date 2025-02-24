@@ -229,7 +229,7 @@ let determineComputedTheme = () => {
   // } else {
   //   return themeSetting;
   // }
-  return "light":
+    return "light";
 };
 
 let initTheme = () => {

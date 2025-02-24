@@ -50,6 +50,11 @@ table.table a {
 }
 
 .table-dark {
+  color: var(--global-text-color);
+  background-color: transparent;
+  &.table-bordered {
+    border: 1px solid var(--global-divider-color) !important;
+  }
 }
 
 blockquote {

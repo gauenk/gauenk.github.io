@@ -6,7 +6,8 @@ permalink: /
 
 profile:
   align: left
-  image: headshot.jpg
+  # image: headshot.jpg
+  image: mountains_sm.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>gauenk at purdue.edu</p>
